@@ -1,0 +1,29 @@
+ul, li, div {
+    
+    border: 2px solid red;
+    padding: 10px;
+}
+
+table {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+
+.divTest1 {
+    font-size: 32px;
+    color: blueviolet;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.divTest2 {
+    font-size: 24px;
+    color: black;
+    padding: 0px;
+    border: 1px solid green;
+}
