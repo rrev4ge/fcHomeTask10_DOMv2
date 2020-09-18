@@ -3,7 +3,8 @@ const inputR = createDomElement("input", {type: "text"}, []);
 const inputV = createDomElement("input", {type: "text"}, []);
 const form = createDomElement("form", {id: "form"}, [inputR, inputV]);
 const elem = createDomElement("div", {id: "elem"}, []);
-const root = createDomElement("div", {id: "root"}, [form, elem]);
+const ul = createDomElement("div", {id: "ul"}, []);
+const root = createDomElement("div", {id: "root"}, [form, elem, ul]);
 document.querySelector("body").append(root);
 
 
@@ -24,9 +25,14 @@ inputR.addEventListener("input", (event) => {
 });
 
 
-function setClass() {
-
-  setElementAttributes(elem, {class: "www"});
+function setClass(elementNode, attribute) {
+  if (checkAttribute (elementNode, attribute)) {
+    removeElementAttributesValue(elementNode, attribute);
+  }
+  if (!checkAttribute (elementNode, attribute)) {
+    setElementAttributes(elementNode, attribute);
+    
+  }
   
 }
 
