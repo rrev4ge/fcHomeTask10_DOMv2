@@ -28,6 +28,7 @@ inputR.addEventListener("input", (event) => {
 function setClass(elementNode, attribute) {
   if (checkAttribute (elementNode, attribute)) {
     removeElementAttributesValue(elementNode, attribute);
+    return;
   }
   if (!checkAttribute (elementNode, attribute)) {
     setElementAttributes(elementNode, attribute); 
@@ -59,7 +60,7 @@ function addLi(objArr) {
       const {
         target
       } = event;
-      target.classList.add("www");
+      setClass(target, {class: "www"})
     })   
     ul.append(li);
   }
